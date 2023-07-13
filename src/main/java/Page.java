@@ -17,8 +17,8 @@ public class Page {
     private String loginBtnLocator = "//form[@id='formSign']/div[@class='row']/div/button";
     private String errorMessageLocator = "//div[@class='form-group form-group-error']/label[@class='error' and @style='display: block;']";
 
-    public Page(WebDriver driver){
-        this.driver = driver;
+    public Page(){
+        this.driver = DriverSingleton.getDriver();
     }
 
     public Page getURL(){

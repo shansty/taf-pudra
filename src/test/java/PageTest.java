@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 public class PageTest extends BaseTest{
 
     @Test
-    public void testLoginWithInvalidData(){
+    public void testLoginFormWithInvalidData(){
 
         Page page = new Page(driver);
         page.getURL().clickEnterBtn().fillEmail("test@test.com").fillPassword("12345").clickLoginBtn();

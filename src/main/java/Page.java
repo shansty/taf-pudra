@@ -22,35 +22,41 @@ public class Page {
     }
 
     public Page getURL(){
+
         driver.get(baseURL);
         return this;
     }
 
     public Page clickEnterBtn(){
+
         WebElement enterBtn = driver.findElement(By.xpath(enterBtnLocator));
         enterBtn.click();
         return this;
     }
 
     public Page fillEmail(String email){
+
         WebElement emailInput = driver.findElement(By.name(emailInputLocator));
         emailInput.sendKeys(email);
         return this;
     }
 
     public Page fillPassword(String password){
+
         WebElement passwordInput = driver.findElement(By.name(passwordInputLocator));
         passwordInput.sendKeys(password);
         return this;
     }
 
     public Page clickLoginBtn(){
+
         WebElement loginBtn = driver.findElement(By.xpath(loginBtnLocator));
         loginBtn.click();
         return this;
     }
 
     public String getErrorMessage(){
+
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
         WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(errorMessageLocator)));
         String errorMessageText = errorMessage.getText();

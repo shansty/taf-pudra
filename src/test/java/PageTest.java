@@ -11,4 +11,3 @@ public class PageTest extends BaseTest{
         Assert.assertEquals(page.getErrorMessage(), "Неверно указан E-mail или пароль");
     }
 }
-//
